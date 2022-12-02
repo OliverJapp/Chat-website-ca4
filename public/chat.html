@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket.io simple chat</title>
+    <link rel="stylesheet" href="/css/demo.css" />
+  </head>
+  <body>
+    <div class="sidenav">
+        <div class="inbox__people">
+            <h4>Active users</h4>
+          </div>
+
+      </div>
+      
+      
+      <br>
+        <div class= "typing">
+        </div>
+      <hr>
+      <div class="content">
+        <div class="Nav" id="myTopnav" style="width:99%;">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="chat.html">Chat</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa-fa-bars"><img src="https://familylegacy-normaljamaica.codio-box.uk/download.png" alt="fa fa-bar" width="50" height="30"></i>
+            </a>
+        </div>
+        <!--
+            Added this from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp to create a resposive ui that looks more appealing on mobile.
+        -->
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "Nav") {
+                    x.className += " clicked";
+                } else {
+                    x.className = "Nav";
+                }
+            }
+        </script>
+        <div class="messages__history"></div>
+          <div class="fallback"></div>
+        <div class="inbox__messages">
+        </div>
+      <div>
+        <form class="message_form">
+          <input type="text" class="message_form__input" placeholder="Type a message" onkeypress="Typing()">
+        </form>
+      </div>
+
+
+      
+      <script>
+        function Typing() {
+          const user = "temp-0213";
+          const type_status = `
+              <div class="typeStatus">
+                <p>${user} <a id="type_status" href="https://familylegacy-normaljamaica.codio-box.uk/live-chat.png" alt ="live-chat.png</p>
+              </div>`;
+        
+          messages__history.innerHTML += type_status
+        }
+      </script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+  </body>
+</html>
