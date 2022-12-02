@@ -1,0 +1,130 @@
+Report:
+
+    a. Completeness (all aspects are covered) [4 marks]
+        1)
+        a. Home page - Include some overview of the page in general
+        b. About page – Further details, supplementary and background information on thetopic of your websiteie. Includes a brief summary of how the site was developed (you can useaspects of your submission report but not the full report in its entirety)
+        c. Chat application pageWith marking based on:
+            i. HTML validation [7 marks]
+            ii. Navigation [7 marks]
+            iii. Semantic structure of the code [7 marks]
+            iv. Useful extras [4 marks]
+
+        2)
+        The boostrap classes you have used with your website. With marking based on:
+        a. CSS validation [6 marks]
+        b. Page design (sensible padding, responsive layout, consistency of design) [6 marks]
+        c. Documentation in the code [6 marks]
+        d. Your design report [7 marks]
+        
+        3)
+        a. The chat application will provide a notification to existing users when a new users’joins [4 marks]
+        b. The chat application will show a list of users currently within a chat [4 marks]
+        c. The chat application will inform users when a new user joins a chat [4 marks]
+        d. The chat application will inform users when a user exits a chat [4 marks]
+        e. The chat application will inform other users when other connected users are typing a message [4 marks]
+
+        EXTRA
+        a. Attempt, status (working or not) [5 marks]
+        b. Integration with rest of application [5 marks]
+        c. Rational for this discussed in the report [5 marks]
+
+        Completeness dtails:
+            1)a, b, and c are completed. The website has three pages with the specified required content.
+            i, ii, iii are completed.
+            iv useful extras:
+                Colouration to specify if message is yours, an other users or System message.
+                autoscroll on new message, to keep message history updated.
+
+            2)a, b, c and d are all completed.
+
+            3)a, b, c, d, e are all completed
+                (a and c read as the same task?)
+
+            Extra:
+                Unattempted
+                
+
+    b. References to sources [3 marks]
+        ---HTML---
+        Navbar:
+        Added this from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp to create a resposive ui that looks more appealing on mobile.
+        
+        ---CSS---
+        Images:
+        https://www.freepikcompany.com/legal Terms of use section 8 paragraph 6
+        The authorization to use the Freepik Content shall be free provided that any use of the content in the Freepik Content by the User is credited to the Company/Website as stated by the Company from time to time.-->
+        All artists are credited in page via links.
+
+        background color:
+        https://www.w3schools.com/css/css3_gradients.asp
+
+        Alignment of elements:
+        https://stackoverflow.com/questions/9067892/how-to-align-two-elements-on-the-same-line-without-changing-html
+        div {
+            display: flex;
+            justify-content: space-between;
+            }
+        Code by: Tara S.
+
+        Button style:
+        https://www.w3schools.com/css/css3_buttons.asp
+
+        Text-wrapping
+        https://www.w3schools.com/cssref/css3_pr_word-wrap.php
+
+        ---Javascript---
+        Selection of last index of a list:
+        https://stackoverflow.com/questions/3216013/get-the-last-item-in-an-array
+        arr.slice(-1)[0] 
+        code by: kritzikratzi
+
+        Autoscroll on new message:
+        https://stackoverflow.com/questions/18614301/keep-overflow-div-scrolled-to-bottom-unless-user-scrolls-up
+        const isScrolledToBottom = out.scrollHeight - out.clientHeight <= out.scrollTop + 1
+        const newElement = document.createElement("div")
+        if (isScrolledToBottom) {
+            out.scrollTop = out.scrollHeight - out.clientHeight
+
+        Code by: dotnetCarpenter
+
+        Set interval information:
+        https://stackoverflow.com/questions/5801543/javascript-setinterval
+        code by: Delan Azabani
+
+    c. Challenges mentioned [4 marks]
+        Autoscroll:
+            During development of the chat i noticed that i'd have to sroll down to see every new message, i thought this was a bad user experience, so i attempted to fix it by setting on every new message bring reset to bottom of box but i found this sudden jump jarring, I eventually found dotnetCarpenter's comment on a similar problem and adopted it into my project.
+        Typing indicator:
+            On user testing i found that i forgot to account for if a user backspaced out a message thus leaving out a typing indicator on. (typing indicator was onkypress= show typing, onsubmit =show active), I found code by Delan Azabani that allowed for a delay of a functionso i applied some logic to it so that every keypress would reset a timer and if the timer grew larger than 2secs it would stop the typing indicator
+        Text extending out of box:
+            On user testing, long messages was found to extend past a message border, i added Text-wrapping
+
+    d. Design discussed [4 marks]
+
+        Consistent design across the three pages:
+            Over the three pages they share simmilar themes e.g. the same background gradient,  Same navbar style, same image art style.
+
+            I've tried to keep a consistent feel thoughout this website.
+
+        The index.html page:
+            I wanted this page to quickly display what the page was about;
+                So i had three images from flaticon placed in large placed prominently:
+                    Man.icon - Livechat.icon - Woman.icon
+                    I feel as these three images coneyed that it was a live chat platform between users
+                I also had a small description of what this webstie entailed
+
+        The about.html page:
+            This page was detailed with how the project was underwent and what each page entailed.
+
+        The chat.html page:
+            I wanted this page as declutered as possible as too ensure the focus would be on the chat itself:
+                Colour system of messages:
+                    User messages are coloured to show that it's thier message. System messages are yellow to alert users, and all other messages from other users are gray.
+
+        Mobile design:
+            This website is a computer first website, but mobile design was heavily considered during develoment.
+                User testing on mobile devices found it to translate poorly initially, afeter some changes to layout it was recieved better and was a fully usable website on mobile.
+
+        
+

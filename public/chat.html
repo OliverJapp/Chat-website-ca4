@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socket.io simple chat</title>
-    <link rel="stylesheet" href="/css/demo.css" />
+    <link rel="stylesheet" href="/css/demo.css">
   </head>
   <body>
     <div class="sidenav">
         <div class="inbox__people">
             <h4>Active users</h4>
-          </div>
-
-      </div>
+        </div>
+    </div>
       
       
       <br>
@@ -41,31 +40,21 @@
                 }
             }
         </script>
+
         <div class="messages__history"></div>
           <div class="fallback"></div>
         <div class="inbox__messages">
         </div>
-      <div>
-        <form class="message_form">
-          <input type="text" class="message_form__input" placeholder="Type a message" onkeypress="Typing()">
-        </form>
+        <div>
+          <form class="message_form">
+            <input type="text" class="message_form__input" placeholder="Type a message" onkeydown="typing()">
+          </form>
+        </div>
       </div>
-
-
-      
-      <script>
-        function Typing() {
-          const user = "temp-0213";
-          const type_status = `
-              <div class="typeStatus">
-                <p>${user} <a id="type_status" href="https://familylegacy-normaljamaica.codio-box.uk/live-chat.png" alt ="live-chat.png</p>
-              </div>`;
-        
-          messages__history.innerHTML += type_status
-        }
-      </script>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/client.js"></script>
+    <!--https://stackoverflow.com/questions/9067892/how-to-align-two-elements-on-the-same-line-without-changing-html-->
+    <!--Tara S.-->
   </body>
 </html>

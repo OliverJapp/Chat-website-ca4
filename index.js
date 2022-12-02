@@ -36,5 +36,13 @@ io.on("connection", function (socket) {
   socket.on("chat message", function (data) {
     io.emit("chat message", data);
   });
+
+  socket.on("is typing", (data) => {
+    io.emit("is typing", data)
+  });
+
+  socket.on("stop typing", (data) => {
+    io.emit("stop typing", data)
+});
   
 });
