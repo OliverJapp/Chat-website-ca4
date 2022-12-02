@@ -1,14 +1,36 @@
 * {
     box-sizing: border-box;
   }
-  
   body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #3289DC;
-    /*https://www.w3schools.com/css/css3_gradients.asp*/
-    background-image: linear-gradient(to bottom right, #A2FDC3, #13A9A9);
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  /*https://www.w3schools.com/css/css3_gradients.asp*/
+  /*https://codepen.io/P1N2O/pen/pyBNzX*/
+  /*
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  */
+  /*CodePen is an open-source web development community. Public Pens and Projects you post to CodePen are automatically licensed under the MIT license. This means that CodePen, other members of the CodePen community, and visitors to CodePen may fork or re-use your public Pens or Projects under the terms of that license. */
   }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /*https://animatedbackgrounds.me/about.html*/
+  /*Here I have also provided a link to the source code of each and every animated background video included in my collection of animated backgrounds for free and you can use these codes without any restriction or limitation*/
   
   /* Style the side navigation */
   .sidenav {
@@ -51,11 +73,19 @@
     margin-left: 200px;
     padding-left: 20px;
   }
+  @media screen and (max-width: 600px){
+    .content {
+    margin-left: 100px;
+    padding-left: 10px;
+    }
+  }
 
 /*Styling Nav*/
 .Nav {
   overflow: hidden;
-  background-color: #4370FE;
+  background: linear-gradient(-45deg, #23d5ab ,#23a6d5, #e73c7e, #ee7752);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
   position:sticky;
 }
 .Nav a {
@@ -71,7 +101,9 @@
   display: none;
 }
 .Nav a:hover {
-  background-color: #3289DC;
+  background: linear-gradient(-45deg, #FFD580, #FFB6C1, #ADD8E6, #AFE4DE);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
   text-decoration:none;
 }
 /*Styling nav on small screens to improve usability*/
@@ -150,16 +182,6 @@
   text-align:center;
 }
 
-/*Sources of images*/
-footer {
-  background-color:#FDA2F9;
-  text-align:center;
-  bottom:0;
-  width:100%;
-  padding:5px;
-}
-
-
 /*-- Chat.html page css --*/
 
 /*styling up text box*/
@@ -169,6 +191,16 @@ footer {
   height:700px;
   overflow:auto;
   width:99%;
+}
+
+@media screen and (max-width: 600px) {
+  .messages__history {
+    word-wrap: break-word;
+    border:solid;
+    height:550px;
+    overflow:auto;
+    width:99%;
+  }
 }
 /*https://www.w3schools.com/cssref/css3_pr_word-wrap.php*/
 
@@ -242,4 +274,18 @@ footer {
   margin:1px;
   padding:1px;
   float:right;
+}
+
+/*Sources of images*/
+footer {
+  background-color:#FDA2F9;
+  text-align:center;
+  bottom:0;
+  width:100%;
+  padding:5px;
+}
+@media screen and (max-width: 600px) {
+  .sidenav {
+    width: 100px;
+  }
 }

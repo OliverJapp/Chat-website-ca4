@@ -57,7 +57,13 @@ Report:
         All artists are credited in page via links.
 
         background color:
-        https://www.w3schools.com/css/css3_gradients.asp
+        https://www.w3schools.com/css/css3_gradients.asp\
+        https://codepen.io/P1N2O/pen/pyBNzX
+
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	    background-size: 400% 400%;
+	    animation: gradient 15s ease infinite;
+        Code by: Manuel Pinto
 
         Alignment of elements:
         https://stackoverflow.com/questions/9067892/how-to-align-two-elements-on-the-same-line-without-changing-html
@@ -99,6 +105,10 @@ Report:
             On user testing i found that i forgot to account for if a user backspaced out a message thus leaving out a typing indicator on. (typing indicator was onkypress= show typing, onsubmit =show active), I found code by Delan Azabani that allowed for a delay of a functionso i applied some logic to it so that every keypress would reset a timer and if the timer grew larger than 2secs it would stop the typing indicator
         Text extending out of box:
             On user testing, long messages was found to extend past a message border, i added Text-wrapping
+        Minor adjustments on mobile:
+        During development focus was on making a pc version that looked good and worked on mobile, after the laptop version was completed focus was put on making the mobile version easier and better to use.
+        Background:
+            I dislike single colour backgrounds so i initially put in place a gradient background but felt it was stale for the website so i found a way to animate the gradient change and feel this allows the website to feel more dynamic
 
     d. Design discussed [4 marks]
 

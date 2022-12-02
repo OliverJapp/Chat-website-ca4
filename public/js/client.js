@@ -201,3 +201,4 @@ const active_status = function(user) {
     type_display_val.style.display = 'none';
     active_display_val.style.display = 'block';
 };
+
