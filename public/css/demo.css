@@ -5,6 +5,7 @@
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
+  /*Background*/ 
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   /*https://www.w3schools.com/css/css3_gradients.asp*/
@@ -16,7 +17,7 @@
   */
   /*CodePen is an open-source web development community. Public Pens and Projects you post to CodePen are automatically licensed under the MIT license. This means that CodePen, other members of the CodePen community, and visitors to CodePen may fork or re-use your public Pens or Projects under the terms of that license. */
   }
-
+  /*Backgroun*/ 
   @keyframes gradient {
     0% {
       background-position: 0% 50%;
@@ -192,7 +193,7 @@
   overflow:auto;
   width:99%;
 }
-
+/*Styling to improve mobile chat*/ 
 @media screen and (max-width: 600px) {
   .messages__history {
     word-wrap: break-word;
@@ -259,6 +260,7 @@
   justify-content: space-between;
 }
 
+/*Icons to repersent status */ 
 .active-status {
   width:25px;
   height:25px;
@@ -275,6 +277,14 @@
   padding:1px;
   float:right;
 }
+.idle-status {
+  width:25px;
+  height:25px;
+  display:none;
+  margin:1px;
+  padding:1px;
+  float:right;
+}
 
 /*Sources of images*/
 footer {
@@ -284,6 +294,7 @@ footer {
   width:100%;
   padding:5px;
 }
+/*Reducing sidenav on mobile for usability*/ 
 @media screen and (max-width: 600px) {
   .sidenav {
     width: 100px;

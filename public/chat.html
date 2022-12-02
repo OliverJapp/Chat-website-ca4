@@ -19,6 +19,7 @@
         </div>
       <hr>
       <div class="content">
+        <!--Navbar-->
         <div class="Nav" id="myTopnav" style="width:99%;">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -30,6 +31,7 @@
         <!--
             Added this from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp to create a resposive ui that looks more appealing on mobile.
         -->
+        <!--Navbar js-->
         <script>
             function myFunction() {
                 var x = document.getElementById("myTopnav");
@@ -39,8 +41,7 @@
                     x.className = "Nav";
                 }
             }
-        </script>
-
+          </script>
         <div class="messages__history"></div>
           <div class="fallback"></div>
         <div class="inbox__messages">
@@ -51,7 +52,6 @@
           </form>
         </div>
       </div>
-
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/client.js"></script>
     <!--https://stackoverflow.com/questions/9067892/how-to-align-two-elements-on-the-same-line-without-changing-html-->
