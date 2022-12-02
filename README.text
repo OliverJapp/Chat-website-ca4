@@ -6,28 +6,47 @@ Report:
         b. About page – Further details, supplementary and background information on thetopic of your websiteie. Includes a brief summary of how the site was developed (you can useaspects of your submission report but not the full report in its entirety)
         c. Chat application pageWith marking based on:
             i. HTML validation [7 marks]
+                All files were ran though a validator on completion.
             ii. Navigation [7 marks]
+                Navigation was developed early on, as from w3schools as they have realy explanation of how to develop
             iii. Semantic structure of the code [7 marks]
+                Code is structured in:
+                    Broad strokes of what category of function if provides --> time of devlopment.
             iv. Useful extras [4 marks]
+                See design discussed.
 
         2)
         The boostrap classes you have used with your website. With marking based on:
         a. CSS validation [6 marks]
+            All files were validated on completiotn
         b. Page design (sensible padding, responsive layout, consistency of design) [6 marks]
+            The website holds a consistant theme across developemnt of mobile version is also done in a way that makes sense
         c. Documentation in the code [6 marks]
+            Code is documented and commented on
         d. Your design report [7 marks]
-        
+            Three of the majour design choices were mobile version, background, and chat page
+            
+                1. Mobile version: was originally almost unusable (was technically usable but felt terrible), so i added code to adjust it whent on less than 600px, and i feel alot more confident in the mobile version as it feels good to use.
+                2. Background: I initially developed a plane blue background, but i despised how static it made the page feel, then i developed a gradient background but that just felt jarring and poorly implemented. Finally the animated background of shifting gradients felt perfect. code by Manuel Pinto
+                3. Chat page: this was an essential thing to get right as it was the crux of the project and had to feel good, look good, and have clear knowledge of what everything was.
+                    
+                    Icons. The icons by freepik on the website flaticon, was helpful in developing the status indicator as it allowed an asy image to communicate status.
+                    message__history class was dilliberatly sized to take up as much of the screen as possible as i wanted the fous of the page to be drawn to that area.
+                        Messages: Messages were colour coded to make it clear what messages were yours, the system, or another users
+                    Navbar: i placed the navbar over the message_history as when place above the project it looked tacky and more like an afterthought, i feel this gives ti a clean look especially with the background colour changing gradient
         3)
         a. The chat application will provide a notification to existing users when a new users’joins [4 marks]
         b. The chat application will show a list of users currently within a chat [4 marks]
         c. The chat application will inform users when a new user joins a chat [4 marks]
         d. The chat application will inform users when a user exits a chat [4 marks]
         e. The chat application will inform other users when other connected users are typing a message [4 marks]
+            All completed.
 
         EXTRA
         a. Attempt, status (working or not) [5 marks]
         b. Integration with rest of application [5 marks]
         c. Rational for this discussed in the report [5 marks]
+            All completed.
 
         Completeness dtails:
             1)a, b, and c are completed. The website has three pages with the specified required content.
@@ -42,7 +61,10 @@ Report:
                 (a and c read as the same task?)
 
             Extra:
-                Unattempted
+                Completed: After completing the rest o the project i had a day to spare in develoment, i was initially skeptical if i had the time to attempt fix and integrate the idle status but i realized the code for typing is simmilar and useful in developing the communication with the server i also founc code by equiman on stack overflow which went into detail on how to develop the idle timer.
+                Problems encountered during development:
+                    Idle status never returning to active:
+                        This was an error that was caused by an inability to pass the user as it was undefeined on start. I found a workaround that feels natural and incredibly obvious after development i simply increased the timer from 1milisecond to 10seconds (later 60) so that typing(interacting) would auto update it.
                 
 
     b. References to sources [3 marks]
@@ -80,6 +102,29 @@ Report:
         https://www.w3schools.com/cssref/css3_pr_word-wrap.php
 
         ---Javascript---
+
+        Idle Status:
+        https://stackoverflow.com/questions/667555/how-to-detect-idle-time-in-javascript
+        var inactivityTime = function () {
+        var time;
+        window.onload = resetTimer;
+        // DOM Events
+        document.onmousemove = resetTimer;
+        document.onkeydown = resetTimer;
+
+        function logout() {
+            alert("You are now logged out.")
+            //location.href = 'logout.html'
+        }
+
+        function resetTimer() {
+            clearTimeout(time);
+            time = setTimeout(logout, 3000)
+            // 1000 milliseconds = 1 second
+            }
+        };
+        Code by: equiman
+
         Selection of last index of a list:
         https://stackoverflow.com/questions/3216013/get-the-last-item-in-an-array
         arr.slice(-1)[0] 

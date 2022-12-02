@@ -27,22 +27,26 @@ io.on("connection", function (socket) {
     //... is the the spread operator, adds to the set while retaining what was in there already
     io.emit("new user", [...activeUsers]);
   });
-  
+  //user disconnect function
   socket.on("disconnect", function () {
       activeUsers.delete(socket.userId);
       io.emit("user disconnected", socket.userId);
   });
-
+  //chat message function
   socket.on("chat message", function (data) {
     io.emit("chat message", data);
   });
-
+  // user typing function
   socket.on("is typing", (data) => {
-    io.emit("is typing", data)
+    io.emit("is typing", data);
   });
-
+  // user hasn't been typing for a while or has stopped
   socket.on("stop typing", (data) => {
-    io.emit("stop typing", data)
-});
+    io.emit("stop typing", data);
+  });
+  // User hasn't been active for a while
+  socket.on("idle", (data) => {
+    io.emit("idle", data);
+  });
   
 });
